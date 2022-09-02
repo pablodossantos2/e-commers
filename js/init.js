@@ -9,10 +9,12 @@ const EXT_TYPE = ".json";
 
 
 document.addEventListener("DOMContentLoaded", function(){
-  console.log(localStorage.getItem("email"));
-  if(localStorage.getItem("email") === null){
+  const email = localStorage.getItem("email");
+  if(email === null){
     window.location = "login.html";
-    console.log("ento al if");
+  }
+  else{
+    document.getElementById("usuario").innerHTML = email;
   }
 })
 
